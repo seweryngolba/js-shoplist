@@ -26,3 +26,29 @@ let shopProduct = [
     productPrice: 239.99,
   },
 ];
+
+let shipmentProduct = [
+  {
+    productName: "Piłka do siatkówki",
+    productPrice: 59.99,
+  },
+  {
+    productName: "Piłka do tenisa",
+    productPrice: 59.99,
+  },
+  {
+    productName: "Piłka do koszykówki",
+    productPrice: 59.99,
+  },
+];
+
+// forEach
+
+const showProducts = () => {
+  console.log("Lista Produktów:");
+  console.log("================");
+  shopProduct.forEach((product) => {
+    console.log(`${product.productName} - ${product.productPrice} PLN`);
+  });
+  console.log("================");
+};
