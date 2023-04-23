@@ -64,3 +64,19 @@ const addNewProduct = () => {
   });
   showProducts();
 };
+
+// Usuwanie ostatniego elementu .pop()
+
+const removeLastProduct = () => {
+  let lastProduct = shopProduct.pop();
+  showProducts();
+  return lastProduct;
+};
+
+// Usuwanie pierwszego elementu .shift()
+
+const removeFirstProduct = () => {
+  let firstProduct = shopProduct.shift();
+  showProducts();
+  return firstProduct;
+};
