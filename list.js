@@ -42,7 +42,7 @@ let shipmentProduct = [
   },
 ];
 
-// forEach
+// .forEach()
 
 const showProducts = () => {
   console.log("Lista Produktów:");
@@ -51,4 +51,16 @@ const showProducts = () => {
     console.log(`${product.productName} - ${product.productPrice} PLN`);
   });
   console.log("================");
+};
+
+// .push() --> Dodawanie elementów
+
+const addNewProduct = () => {
+  const newProductName = prompt("Podaj nazwe produktu");
+  const newProductPrice = prompt(`Podaj cene ${newProductName}: `);
+  shopProduct.push({
+    productName: newProductName,
+    productPrice: Number(newProductPrice).toFixed(2),
+  });
+  showProducts();
 };
