@@ -96,3 +96,13 @@ const addDifShipmentProduct = () => {
   let newItemsProducts = [...shopProduct, ...shipmentProduct];
   consoleLogProducts(newItemsProducts);
 };
+
+// dodawanie promocji .map()
+
+const addPromotionOnAll = () => {
+  const promotionProducts = shopProduct.map((product) => ({
+    productName: product.productName,
+    productPrice: Number(product.productPrice * 0.5).toFixed(2),
+  }));
+  consoleLogProductsAllData(promotionProducts);
+};
