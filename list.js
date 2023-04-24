@@ -80,3 +80,19 @@ const removeFirstProduct = () => {
   showProducts();
   return firstProduct;
 };
+
+// Laczenie dwóch tablic 1 sposób .concat()
+
+const addShipmentProduct = () => {
+  console.log("Przyjechała dostawa produktów:");
+  shopProduct = shopProduct.concat(shipmentProduct);
+  showProducts();
+};
+
+//! Łącznie tablic (...spread))
+
+const addDifShipmentProduct = () => {
+  console.log("Przyjechała dostawa produktów:");
+  let newItemsProducts = [...shopProduct, ...shipmentProduct];
+  consoleLogProducts(newItemsProducts);
+};
