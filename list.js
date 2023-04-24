@@ -125,3 +125,12 @@ const findProduct = () => {
     }
   }
 };
+
+//! Podlicz wartość produktów ( .reduce() )
+
+const sumPriceOfAllProduct = () => {
+  const sumPrices = shopProduct.reduce((acc, price) => {
+    return acc + price.productPrice;
+  }, 0);
+  console.log(`Cena wszystkich produktów wynosi ${sumPrices.toFixed(2)}`);
+};
