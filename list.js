@@ -104,5 +104,24 @@ const addPromotionOnAll = () => {
     productName: product.productName,
     productPrice: Number(product.productPrice * 0.5).toFixed(2),
   }));
-  consoleLogProductsAllData(promotionProducts);
+  consolelogProductsAllData(promotionProducts);
+};
+
+//! Znajdź produkt ( .filter())
+
+const findProduct = () => {
+  let lookinForItem = prompt("Czego szukasz?");
+
+  const findedProduct = shopProduct.filter((item) => {
+    return item.productName === lookinForItem;
+  });
+  if (findedProduct.length === 0) {
+    console.log("Nie ma takiego produktu");
+  } else {
+    for (let i = 0; i < findedProduct.length; i++) {
+      console.log(
+        `Znalazłem ${findedProduct[i].productName} o cenie ${findedProduct[i].productPrice} PLN`
+      );
+    }
+  }
 };
