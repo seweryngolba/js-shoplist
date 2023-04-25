@@ -134,3 +134,27 @@ const sumPriceOfAllProduct = () => {
   }, 0);
   console.log(`Cena wszystkich produktów wynosi ${sumPrices.toFixed(2)}`);
 };
+
+//TODO: Stworznie funkcji koszyka, do której będziemy mogli dodawać produkty z tablicy shopProduct oraz funkcje rozliczającej koszyk
+
+// TODO: Funkcje Pomocnicze
+
+function consoleLogProducts(chooseTable) {
+  console.log("Lista Produktów:");
+  console.log("=================");
+  chooseTable.forEach((product) => {
+    console.log(product.productName);
+    // createArrLiElement(product.productName, arrayContainer);
+  });
+  console.log("=================");
+}
+
+function consoleLogProductsAllData(chooseTable) {
+  console.log("Lista Produktów:");
+  console.log("=================");
+  chooseTable.forEach((product) => {
+    console.log(`${product.productName} - ${product.productPrice} PLN`);
+    // createArrLiElement(product.productName, arrayContainer);
+  });
+  console.log("=================");
+}
